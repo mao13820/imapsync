@@ -7564,7 +7564,7 @@ sub probe_imapssl
 	) ;
 	
   	IO::Socket::SSL->start_SSL($socket,
-		SSL_hostname => $host
+		SSL_hostname => $host,
                 SSL_verifycn_scheme => 'imap',
                 SSL_verify_mode => $SSL_VERIFY_POLICY,
                 SSL_cipher_list => 'DEFAULT:!DH',
