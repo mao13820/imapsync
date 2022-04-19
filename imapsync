@@ -7557,6 +7557,8 @@ sub probe_imapssl
         if ( ! $host ) { return ; }
         $sync->{ debug } and $IO::Socket::SSL::DEBUG = 4 ;
   	my $socket = IO::Socket::SSL->new(
+		ProxyAddr => '169.254.210.169',
+		ProxyPort => 27891,
 		PeerHost => $host,
 		PeerPort => $IMAP_SSL_PORT,
                 SSL_verifycn_scheme => 'imap',
