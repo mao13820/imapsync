@@ -1001,6 +1001,7 @@ use Sys::MemInfo ;
 use Regexp::Common ;
 use Text::ParseWords ; # for quotewords()
 use File::Tail ;
+use IO::Socket::Socks;
 
 local $OUTPUT_AUTOFLUSH = 1 ;
 
