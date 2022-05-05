@@ -958,12 +958,7 @@ copy_folder.pl in imapsync source code.
 # use pragmas
 #
 
-use IO::Socket::Socks::Wrapper (
-{
-    ProxyAddr => '169.254.210.169',
-    ProxyPort => 27891,
-}
-);
+
 
 use strict ;
 use warnings ;
@@ -1007,6 +1002,13 @@ use Sys::MemInfo ;
 use Regexp::Common ;
 use Text::ParseWords ; # for quotewords()
 use File::Tail ;
+
+use IO::Socket::Socks::Wrapper (
+{
+    ProxyAddr => '169.254.210.169',
+    ProxyPort => 27891,
+}
+);
 
 local $OUTPUT_AUTOFLUSH = 1 ;
 
